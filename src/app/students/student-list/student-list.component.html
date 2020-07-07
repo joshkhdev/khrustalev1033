@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 my-2">
+            <label for="selectfaculty">Фильтрация по напр. подготовки (Факультету)</label>
+            <select class="form-control custom-select" id="selectfaculty" [(ngModel)]="selectFaculty">
+                <option value="">Не выбрано</option>
+                <option [ngValue]="faculties.IT">ИТ</option>
+                <option [ngValue]="faculties.Engineering">Инженерный</option>
+                <option [ngValue]="faculties.Math">Математический</option>
+                <option [ngValue]="faculties.Economic">Экономический</option>
+            </select>
+        </div>
+        <div class="col-12 my-2">
+            <label for="selectGroup">Фильтрация по группе</label>
+            <select class="form-control custom-select" id="selectGroup" [(ngModel)]="selectGroup">
+                <option value="">Не выбрано</option>
+                <option value="ИТ-1">ИТ-1</option>
+                <option value="Инж-1">Инж-1</option>
+                <option value="Мат-1">Мат-1</option>
+                <option value="Эк-1">Эк-1</option>
+            </select>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ФИО</th>
+                <th scope="col">Телефон</th>
+                <th scope="col">Эл. почта</th>
+                <th scope="col">Дата рождения</th>
+                <th scope="col">Напр. подготовки (Факультет)</th>
+                <th scope="col">Группа</th>
+                <th scope="col" class="text-right">
+                    <button class="btn btn-primary" (click)="onAddProfile()">
+                        Добавить пользователя
+                    </button>
+                </th>
+            </tr>
+        </thead>
+        <tbody *ngIf="isLoaded">
+            <tr *ngFor="let student of students | filterGroup: selectGroup | filterFaculty: selectFaculty | sortFilter">
+                <th scope="row">{{ student.id }}</th>
+                <td>{{ student.surname + " " + student.name.charAt(0) + ". " + student.patronymic.charAt(0) + "." }}</td>
+                <td>{{ student.phone }}</td>
+                <td>{{ student.email }}</td>
+                <td>{{ student.date }}</td>
+                <td>{{ getFaculty(student.faculty) }}</td>
+                <td>{{ student.group }}</td>
+                <td class="text-right">
+                    <button class="btn btn-secondary" (click)="onLinkProfile(student.id)">Редактировать</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

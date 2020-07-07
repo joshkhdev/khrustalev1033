@@ -1,0 +1,59 @@
+{
+  "students": [
+    {
+      "name": "Павел",
+      "surname": "Павлов",
+      "patronymic": "Павлович",
+      "phone": "+7(912)851-7634",
+      "email": "pavlov.p.p532@ya.ru",
+      "date": "16.05.2002",
+      "faculty": 0,
+      "group": "ИТ-1",
+      "id": 1
+    },
+    {
+      "name": "Магомед",
+      "surname": "Магомедов",
+      "patronymic": "Магомедович",
+      "phone": "+7(999)999-9999",
+      "email": "magomed.m.m@mail.com",
+      "date": "12.10.1999",
+      "faculty": 1,
+      "group": "Инж-1",
+      "id": 2
+    },
+    {
+      "name": "Сергей",
+      "surname": "Сергеев",
+      "patronymic": "Сергеевич",
+      "phone": "+7(984)045-8212",
+      "email": "sergeev-msk@gmail.com",
+      "date": "29.09.2000",
+      "faculty": 2,
+      "group": "Мат-1",
+      "id": 3
+    },
+    {
+      "name": "Роман",
+      "surname": "Романов",
+      "patronymic": "Романович",
+      "phone": "+7(965)642-6335",
+      "email": "romanovicz@post.pl",
+      "date": "05.03.2001",
+      "faculty": 3,
+      "group": "Эк-1",
+      "id": 4
+    },
+    {
+      "name": "Тест",
+      "surname": "Тестов",
+      "patronymic": "Тестович",
+      "phone": "+7(900)000-0000",
+      "email": "post@post.ru",
+      "date": "01.01.1970",
+      "faculty": 2,
+      "group": "Мат-1",
+      "id": 5
+    }
+  ]
+}
